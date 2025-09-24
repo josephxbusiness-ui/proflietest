@@ -139,12 +139,25 @@
     }
 
     /* Avatar frame */
-    .avatar{
-      position:relative; aspect-ratio: 4/3;
-      border: 2px solid #fff3; border-radius: 12px; overflow:hidden;
-      box-shadow: 0 0 10px var(--neon2), inset 0 0 18px #000c;
-    }
-    .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+   .avatar {
+  position: relative;
+  width: 100%;
+  max-width: 260px;   /* กำหนดความกว้างสูงสุด */
+  aspect-ratio: 3/4;  /* อัตราส่วนแนวตั้ง (Portrait) */
+  border: 2px solid #fff3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px var(--neon2), inset 0 0 18px #000c;
+  margin: auto;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* ตัดขอบให้พอดี */
+  display: block;
+}
+
     .avatar:after{
       content:"PLAYER 1";
       position:absolute; left:0; right:0; bottom:8px;
